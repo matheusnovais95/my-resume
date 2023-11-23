@@ -94,7 +94,16 @@
 
   .infosButton{
     width: 100%;
- max-width: 100%;
+    max-width: 100%;
   }
 
+  .infosSalutation,
+  .infosApresentation {
+    font-size: 28px;
+  }
+
+  .infosOcupation {
+    padding: 20px 50px;
+    font-size: 14px;
+  }
 }
