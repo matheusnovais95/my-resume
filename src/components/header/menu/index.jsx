@@ -5,7 +5,7 @@ import styles from "./menu.module.css";
 import { MenuBurger } from "../burger";
 
 export const Menu = ({ pageHeight }) => {
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState(window !== undefined ? window.innerWidth : 0);
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
