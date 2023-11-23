@@ -5,23 +5,23 @@ import styles from "./menu.module.css";
 import { MenuBurger } from "../burger";
 
 export const Menu = ({ pageHeight }) => {
-  const [width, setWidth] = useState(window !== undefined ? window.innerWidth : 0);
+  const [width, setWidth] = useState(0);
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    const atualizarTamanhoDaPagina = () => {
-      if (window !== undefined) {
-        const { innerWidth } = window;
-
-        setWidth(innerWidth);
-      }
+    const handleResize = () => {
+      setWidth(window.innerWidth);
     };
 
-    window.addEventListener("resize", atualizarTamanhoDaPagina);
+    if (typeof window !== undefined) {
+      setWidth(window.innerWidth);
 
-    return () => {
-      window.removeEventListener("resize", atualizarTamanhoDaPagina);
-    };
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   return (
@@ -64,7 +64,7 @@ export const Menu = ({ pageHeight }) => {
 
       <div
         className={styles.containerLateralMenu}
-        style={{ left: toggle ? width - 300 : width }}
+        style={{ left: toggle ? width - 300 : '100vw' }}
       >
         <button className={styles.closeMenu} onClick={() => setToggle(false)}>
           X
