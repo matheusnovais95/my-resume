@@ -5,35 +5,45 @@ import styles from "./menu.module.css";
 import { MenuBurger } from "../burger";
 
 export const Menu = ({ pageHeight }) => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState();
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const atualizarTamanhoDaPagina = () => {
-      const { innerWidth } = window;
+      if (window !== undefined) {
+        const { innerWidth } = window;
 
-      setWidth(innerWidth);
+        setWidth(innerWidth);
+      }
     };
-    
+
     window.addEventListener("resize", atualizarTamanhoDaPagina);
 
     return () => {
       window.removeEventListener("resize", atualizarTamanhoDaPagina);
     };
-
-   
   }, []);
 
   return (
     <div
       className={styles.linkGroup}
       style={{
-        borderBottom: pageHeight > 0 && width > 425 ? "1px solid #F86818" : "none",
-        backgroundColor: pageHeight > 0 && width > 425? "#181818" : width > 425 ? "#333333" : 'transparent',
+        borderBottom:
+          pageHeight > 0 && width > 425 ? "1px solid #F86818" : "none",
+        backgroundColor:
+          pageHeight > 0 && width > 425
+            ? "#181818"
+            : width > 425
+            ? "#333333"
+            : "transparent",
       }}
     >
       {width < 426 ? (
-        <MenuBurger onClick={() => setToggle(true)} pageHeight={pageHeight} width={width}/>
+        <MenuBurger
+          onClick={() => setToggle(true)}
+          pageHeight={pageHeight}
+          width={width}
+        />
       ) : (
         <React.Fragment>
           <a href="#home" className={styles.link}>
