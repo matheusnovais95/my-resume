@@ -1,0 +1,100 @@
+.containerHome {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color-light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 100px;
+}
+
+.infos {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.infosSalutation,
+.infosApresentation {
+  color: var(--white);
+  font-size: 48px;
+}
+
+.infosSalutation {
+  font-weight: 400;
+}
+
+.infosApresentation,
+.infosOcupation {
+  font-weight: 700;
+}
+
+.infosApresentationName {
+  color: var(--primary-color);
+}
+
+.infosOcupation {
+  padding: 20px 130px;
+  background-color: var(--background-color-dark);
+  text-align: center;
+  color: var(--primary-color);
+  max-width: 600px;
+}
+
+.infosButton {
+  padding: 18px 40px;
+  border: 1px solid var(--primary-color);
+  border-radius: 2px;
+  text-align: center;
+  color: var(--primary-color);
+  width: 230px;
+  transition: all 0.2s;
+}
+
+.infosButton:hover {
+  border-color: var(--white);
+  color: var(--background-color-dark);
+  background-color: var(--white);
+}
+
+@media screen and (max-width: 650px) {
+
+  .containerHome{
+    padding: 0 70px;
+  }
+
+  .infos {
+    gap: 45px;
+    justify-content: flex-start;
+  }
+
+  .infosSalutation,
+  .infosApresentation {
+    font-size: 32px;
+  }
+
+  .infosOcupation {
+    padding: 20px 65px;
+    font-size: 14px;
+  }
+
+  .infosButton {
+    padding: 16px;
+    max-width: 230px;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .containerHome{
+    padding: 0 30px;
+  }
+
+  .infosButton{
+    width: 100%;
+ max-width: 100%;
+  }
+
+}

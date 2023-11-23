@@ -1,0 +1,15 @@
+.title {
+  font-size: 36px;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+}
+
+
+
+@media screen and (max-width: 700px) { 
+
+}

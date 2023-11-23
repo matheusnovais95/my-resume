@@ -1,0 +1,13 @@
+.menuButton{    
+    background-color: transparent;
+}
+
+.menuButtonResponsive{
+    border: 1px solid #F86818;
+    background-color: var(--background-color-dark);
+    transition: all 0.1s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    
+}
