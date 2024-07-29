@@ -14,11 +14,11 @@ export const Resume = ({ data }) => {
             textDecoration: "underline",
             textUnderlineOffset: "0.2em",
           }}
-          href="/assets/Matheus_Campos_Resume_2023.pdf"
+          href="/assets/Matheus_Campos_Resume_2024.pdf"
           download="Matheus-Novais-Campos-Resume.pdf"
         >
           Download
-        </a>l
+        </a>
         <ResumeItem title="Formação">
           {data.educacao.map((item, i) => {
             return (

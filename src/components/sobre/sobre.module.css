@@ -1,6 +1,6 @@
 .containerSobre {
   width: 100%;
-  min-height: 100vh;
+  min-height: fit-content;
   background-color: var(--background-color-dark);
   gap: 80px;
   padding: 80px 100px;

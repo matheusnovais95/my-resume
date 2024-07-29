@@ -1,6 +1,6 @@
 export const data = {
   nome: "Matheus Novais de Campos",
-  idade: 28,
+  idade: 29,
   local: "São Paulo - SP",
   profissao: "desenvolvedor Front End Web",
   contato: [
