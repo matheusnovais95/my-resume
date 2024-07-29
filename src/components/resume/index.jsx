@@ -18,7 +18,7 @@ export const Resume = ({ data }) => {
           download="Matheus-Novais-Campos-Resume.pdf"
         >
           Download
-        </a>
+        </a>l
         <ResumeItem title="Formação">
           {data.educacao.map((item, i) => {
             return (

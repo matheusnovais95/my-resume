@@ -12,7 +12,7 @@ export const data = {
     },
   ],
   sobre:
-    "Sou desenvolvedor a pouco mais de 2 anos. Desde que me tornei dev trabalhei em projetos diferentes dentro da mesma empresa, atuando sempre como front end web.",
+    "Sou desenvolvedor a pouco mais de 3 anos. Desde que me tornei dev trabalhei em projetos diferentes dentro da mesma empresa, atuando sempre como front end web.",
   educacao: [
     {
       instituicao: "Faculdade de Tecnologia de Sorocaba",
@@ -33,10 +33,13 @@ export const data = {
   habilidades: [
     "JavaScript",
     "React",
-    "Node.js",
+    "React Native",
+    "Nextjs",
     "CSS",
     "HTML",
     "Style Components",
+    "Tailwind CSS",
+    "Chakra UI",
     "Git",
     "Figma",
   ],
