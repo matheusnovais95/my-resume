@@ -8,17 +8,51 @@ export const Resume = ({ data }) => {
     <div className={styles.containerResume} id="resume">
       <Title text="Resumè" />
       <section className={styles.infosResume}>
-        <a
+        <div
           style={{
-            color: "var(--primary-color)",
-            textDecoration: "underline",
-            textUnderlineOffset: "0.2em",
+            height: "auto",
+            width: "auto",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
-          href="/assets/Matheus_Campos_Resume_2024.pdf"
-          download="Matheus-Novais-Campos-Resume.pdf"
         >
-          Download
-        </a>
+          <span style={{ color: "var(--primary-color)", fontSize: 22 }}>
+            Download
+          </span>
+          <div
+            style={{
+              height: "auto",
+              width: "auto",
+              display: "flex",
+              gap: 10,
+            }}
+          >
+            <a
+              style={{
+                color: "var(--primary-color)",
+                textDecoration: "underline",
+                textUnderlineOffset: "0.2em",
+              }}
+              href="/assets/Matheus_Campos_Resume_pt.pdf"
+              download="Matheus-Novais-Campos-pt.pdf"
+            >
+              Pt
+            </a>
+            <a
+              style={{
+                color: "var(--primary-color)",
+                textDecoration: "underline",
+                textUnderlineOffset: "0.2em",
+              }}
+              href="/assets/Matheus_Campos_Resume_en.pdf"
+              download="Matheus-Novais-Campos-en.pdf"
+            >
+              En
+            </a>
+          </div>
+        </div>
         <ResumeItem title="Formação">
           {data.educacao.map((item, i) => {
             return (

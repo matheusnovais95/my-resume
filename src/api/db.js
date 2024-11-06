@@ -11,8 +11,8 @@ export const data = {
       github: "https://github.com/matheusnovais95",
     },
   ],
-  sobre:
-    "Sou desenvolvedor a pouco mais de 3 anos. Desde que me tornei dev trabalhei em projetos diferentes dentro da mesma empresa, atuando sempre como front end web.",
+  sobre: `Sou desenvolvedor a 3 anos. Desenvolvedor(a) Front-End com sólida experiência em criação de interfaces intuitivas e responsivas, utilizando tecnologias modernas como HTML, CSS, JavaScript. Conhecimento em boas práticas de UI/UX e forte atenção aos detalhes na implementação de layouts, garantindo a melhor experiência para o usuário.
+    Também possuo competências em manipulação e visualização de dados utilizando Python e SQL. Proativo e com mentalidade de aprendizado contínuo, buscando aplicar habilidades analíticas no entendimento de tendências e na geração de insights para tomadas de decisão mais estratégicas.`,
   educacao: [
     {
       instituicao: "Faculdade de Tecnologia de Sorocaba",
@@ -42,6 +42,8 @@ export const data = {
     "Chakra UI",
     "Git",
     "Figma",
+    "SQL",
+    "Python",
   ],
   linguas: [
     {
