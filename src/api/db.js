@@ -24,7 +24,7 @@ export const data = {
   experiencia: [
     {
       empresa: "Agile Content",
-      cargo: "Desenvolvedor FrontEnd Web Júnior",
+      cargo: "Desenvolvedor FrontEnd Web",
       inicio: "2021",
       termino: "Atual",
       descricao: "Criação de websites responsivos e otimizados para SEO.",
