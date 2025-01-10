@@ -35,12 +35,12 @@ export const Resume = ({ data }) => {
                 textDecoration: "underline",
                 textUnderlineOffset: "0.2em",
               }}
-              href="/assets/Matheus_Campos_Resume_pt.pdf"
+              href="/assets/Matheus_Campos_R2_pt.pdf"
               download="Matheus-Novais-Campos-pt.pdf"
             >
               Pt
             </a>
-            <a
+            {/* <a
               style={{
                 color: "var(--primary-color)",
                 textDecoration: "underline",
@@ -50,7 +50,7 @@ export const Resume = ({ data }) => {
               download="Matheus-Novais-Campos-en.pdf"
             >
               En
-            </a>
+            </a> */}
           </div>
         </div>
         <ResumeItem title="Formação">
