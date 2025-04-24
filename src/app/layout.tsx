@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { LanguageProvider } from "../context/LanguageContext"; // Importe o Provider
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,11 @@ export default function RootLayout({
         ></script>
         <meta name="google-adsense-account" content="ca-pub-5911231162501990" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <LanguageProvider>{/* Envolva os children com o Provider */}
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

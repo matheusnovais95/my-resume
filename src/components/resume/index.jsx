@@ -2,11 +2,12 @@ import React from "react";
 import styles from "./resume.module.css";
 import { Title } from "../title/index";
 import { ResumeItem } from "./resumeItem/index";
+import { data } from "../../api/db.js";
 
-export const Resume = ({ data }) => {
+export const Resume = ({ texts }) => {
   return (
     <div className={styles.containerResume} id="resume">
-      <Title text="Resumè" />
+      <Title text={texts.experience.title} />
       <section className={styles.infosResume}>
         <div
           style={{
@@ -19,7 +20,7 @@ export const Resume = ({ data }) => {
           }}
         >
           <span style={{ color: "var(--primary-color)", fontSize: 22 }}>
-            Download
+            {texts.header.downloadCV}
           </span>
           <div
             style={{
@@ -40,7 +41,7 @@ export const Resume = ({ data }) => {
             >
               Pt
             </a>
-            {/* <a
+            <a
               style={{
                 color: "var(--primary-color)",
                 textDecoration: "underline",
@@ -50,11 +51,11 @@ export const Resume = ({ data }) => {
               download="Matheus-Novais-Campos-en.pdf"
             >
               En
-            </a> */}
+            </a>
           </div>
         </div>
-        <ResumeItem title="Formação">
-          {data.educacao.map((item, i) => {
+        <ResumeItem title={texts.about.education}>
+          {texts.experience.education.map((item, i) => {
             return (
               <div
                 key={i}
@@ -66,17 +67,17 @@ export const Resume = ({ data }) => {
                   padding: "6px 10px",
                 }}
               >
-                <span style={{ fontSize: 14 }}>{item.instituicao}</span>
+                <span style={{ fontSize: 14 }}>{item.institution}</span>
                 <span style={{ fontSize: 14 }}>
-                  {item.inicio} - {item.termino}
+                  {item.begin} - {item.end}
                 </span>
-                <span style={{ fontSize: 14 }}>{item.curso}</span>
+                <span style={{ fontSize: 14 }}>{item.course}</span>
               </div>
             );
           })}
         </ResumeItem>
-        <ResumeItem title="Experiência">
-          {data.experiencia.map((item, i) => {
+        <ResumeItem title={texts.experience.workExperience}>
+          {texts.experience.works.map((item, i) => {
             return (
               <div
                 key={i}
@@ -89,18 +90,18 @@ export const Resume = ({ data }) => {
                 }}
               >
                 <span style={{ fontSize: 14 }}>
-                  {item.empresa} - {item.cargo}
+                  {item.company} - {item.role}
                 </span>
                 <span style={{ fontSize: 14 }}>
-                  {item.inicio} - {item.termino}
+                  {item.begin} - {item.end}
                 </span>
-                <span style={{ fontSize: 14 }}>{item.descricao}</span>
+                <span style={{ fontSize: 14 }}>{item.description}</span>
               </div>
             );
           })}
         </ResumeItem>
-        <ResumeItem title="Competências">
-          {data.habilidades.map((item, i) => {
+        <ResumeItem title={texts.about.skills}>
+          {texts.experience.skills.map((item, i) => {
             return (
               <div
                 key={i}
@@ -117,8 +118,8 @@ export const Resume = ({ data }) => {
             );
           })}
         </ResumeItem>
-        <ResumeItem title="Idiomas">
-          {data.linguas.map((item, i) => {
+        <ResumeItem title={texts.about.languages}>
+          {texts.experience.languages.map((item, i) => {
             return (
               <div
                 key={i}
@@ -131,7 +132,7 @@ export const Resume = ({ data }) => {
                 }}
               >
                 <span style={{ fontSize: 14 }}>
-                  {item.lingua} - {item.nivel}
+                  {item.language} - {item.level}
                 </span>
               </div>
             );

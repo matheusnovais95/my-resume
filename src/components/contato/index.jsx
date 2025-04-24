@@ -6,24 +6,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileButton, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 
-export const Contato = ({ data }) => {
-  const [contact, setContact] = React.useState({
-    cel: "",
-    email: "",
-    github: "",
-    linkedin: "",
-  });
-  React.useEffect(() => {
-    setContact({
-      cel: data[0].cel,
-      email: data[0].email,
-      github: data[0].github,
-      linkedin: data[0].linkedin,
-    });
-  }, [data]);
+export const Contato = ({ texts }) => {
+  const contact = {
+    cel: texts.contact.cel,
+    email: texts.contact.email,
+    github: texts.contact.github,
+    linkedin: texts.contact.linkedin,
+  };
   return (
     <div className={styles.containerContato} id="contato">
-      <Title text="Contato" />
+      <Title text={texts.contact.title} />
       <section>
         <div className={styles.containerContactItem}>
           <FontAwesomeIcon

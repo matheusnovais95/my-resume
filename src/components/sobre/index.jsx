@@ -2,16 +2,16 @@ import React from "react";
 import Image from "next/image";
 import styles from "./sobre.module.css";
 import { Title } from "../title/index";
+import { useLanguage } from "@/context/LanguageContext";
 
-export const Sobre = ({ about, contact, name, age, local }) => {
-  const [infos, setInfos] = React.useState({ cel: "", email: "" });
-  React.useEffect(() => {
-    setInfos({ cel: contact[0].cel, email: contact[0].email });
-  }, [contact]);
+export const Sobre = ({ texts }) => {
+  const { language } = useLanguage();
+  const { title, description: about, name, age, location: local } = texts.about;
+  const { email, cel: phone } = texts.contact;
   return (
     <div className={styles.containerSobre} id="sobre">
       <section>
-        <Title text="Sobre mim" />
+        <Title text={title} />
         <div className={styles.infosSobre}>
           <p className={styles.infosSobreText}>{about}</p>
           <div className={styles.infosSobreContainer}>
@@ -21,7 +21,7 @@ export const Sobre = ({ about, contact, name, age, local }) => {
                 alt="Picture of the author"
                 fill
                 style={{
-                  objectFit: "contain",                  
+                  objectFit: "contain",
                   borderRadius: "50%",
                   border: "1px solid #ffffff",
                 }}
@@ -30,24 +30,24 @@ export const Sobre = ({ about, contact, name, age, local }) => {
 
             <ul className={styles.infosSobreList}>
               <li className={styles.infosSobreListItem}>
-                <span>Nome: </span>
+                <span>{language === "pt" ? "Nome" : "Name"}: </span>
                 {name}
               </li>
               <li className={styles.infosSobreListItem}>
-                <span>Idade: </span>
+                <span>{language === "pt" ? "Idade" : "Age"}: </span>
                 {age}
               </li>
               <li className={styles.infosSobreListItem}>
-                <span>Local: </span>
+                <span>{language === "pt" ? "Local" : "Location"}: </span>
                 {local}
               </li>
               <li className={styles.infosSobreListItem}>
-                <span>Cel: </span>
-                {infos.cel}
+                <span>{language === "pt" ? "Cel" : "Phone"}: </span>
+                {phone}
               </li>
               <li className={styles.infosSobreListItem}>
                 <span>Email: </span>
-                {infos.email}
+                {email}
               </li>
             </ul>
           </div>

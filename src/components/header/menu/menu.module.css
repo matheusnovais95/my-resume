@@ -1,77 +1,113 @@
-.linkGroup{
-    width: auto;
-    height: 100%;
-    
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 40px;
-    padding: 0 40px;
-    transition: all 0.3s;
+.linkGroup {
+  width: auto;
+  height: 100%;
 
-    position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px;
+  transition: all 0.3s;
+
+  position: relative;
 }
 
-.link{
-    color: var(--white);
-    font-size: var(--font-size-16);
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase;
+.link {
+  color: var(--white);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
-
 
 .containerLateralMenu {
-    width: 90%;
-    height: 100%;
-    max-height: 100vh;
-    max-width: 300px;
-    position: fixed;
-    
-    top: 0;
-    transition: all 0.2s;
-    background-color: var(--background-color-dark);
-    border-left: 1px solid var(--primary-color);
+  width: 90%;
+  height: 100%;
+  max-height: 100vh;
+  max-width: 300px;
+  position: fixed;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;    
+  top: 0;
+  transition: all 0.2s;
+  background-color: var(--background-color-dark);
+  border-left: 1px solid var(--primary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
 .lateralMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px; 
-    margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  margin-top: 100px;
 }
 
-.closeMenu{
-    color: var(--white);
-    font-weight: 700;
-    
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    background-color: transparent;    
-}
+.closeMenu {
+  color: var(--white);
+  font-weight: 700;
 
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background-color: transparent;
+}
 
 .backgroundOpacity {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--background-color-dark);
-    opacity: 0.6;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color-dark);
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 @media screen and (max-width: 425px) {
-    .linkGroup{
-        padding: 0 20px;
-    }
+  .linkGroup {
+    padding: 0 20px;
+  }
+}
+
+.listMenu {
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemListMenu {
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+}
+
+.itemListMenu:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.buttonLanguage {
+  background-color: transparent;
+  color: var(--white);
+  font-size: var(--font-size-16);
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+
+ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.flag {
+  width: 15px;
 }
