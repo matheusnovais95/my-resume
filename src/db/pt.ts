@@ -17,12 +17,14 @@ export const pt: Translation = {
   about: {
     title: "Sobre Mim",
     description:
-      "Sou um desenvolvedor de software com forte foco na criação de aplicações intuitivas e eficientes. Com experiência em várias tecnologias, estou sempre buscando aprender e melhorar minhas habilidades.",
+      "Desenvolvedor front-end com sólida experiência na criação de interfaces modernas, responsivas e performáticas. Domínio em ReactJS e Next.js, com domínio de Styled Components, Tailwind CSS, Chakra UI e gerenciamento de estado com Redux, Zustand e Context API. Experiência com React Query para consumo de APIs e controle de cache, além de Jest para testes unitários. Comprometido com boas práticas, qualidade de código e foco na experiência do usuário. ",
+    highlight:
+      "Atuei na construção e manutenção da aplicação web da Claro TV+, uma plataforma de streaming que atende mais de 400.000 usuários simultâneos. Principais contribuições: implementação de Server-Side Rendering (SSR) para otimizar o desempenho e o SEO, integração da AWS para escalabilidade e infraestrutura em nuvem, desenvolvimento de recursos críticos: vales-presente, página de checkout, landing pages, mecanismo de busca e hierarquia modal.",
     education: "Educação",
     skills: "Habilidades",
     languages: "Idiomas",
     name: "Matheus Novais de Campos",
-    age: 29,
+    age: 30,
     location: "São Paulo, Brasil",
   },
   experience: {
@@ -46,24 +48,27 @@ export const pt: Translation = {
       },
     ],
     skills: [
-      "JavaScript",
-      "React",
-      "React Native",
-      "Nextjs",
-      "CSS",
       "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "ReactJS",
+      "NextJS",
       "Style Components",
       "Tailwind CSS",
       "Chakra UI",
-      "Git",
       "Figma",
-      "SQL",
-      "Python",
+      "Git",
+      "React Query",
+      "SWR",
+      "Zustand",
+      "Redux",
+      "Context API",
     ],
     languages: [
       {
         language: "English",
-        level: "B1",
+        level: "B2",
       },
       {
         language: "Portuguese",

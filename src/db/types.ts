@@ -15,6 +15,7 @@ export interface Translation {
   about: {
     title: string;
     description: string;
+    highlight: string;
     education: string;
     skills: string;
     languages: string;
