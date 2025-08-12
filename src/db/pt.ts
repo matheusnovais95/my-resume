@@ -29,7 +29,7 @@ export const pt: Translation = {
     title: "Resumè",
     education: [
       {
-        course: "Tecnólogo em Análise e Desenvolvimento de Sistema",
+        course: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
         institution: "Faculdade de Tecnologia de Sorocaba",
         begin: "2013",
         end: "2018",
