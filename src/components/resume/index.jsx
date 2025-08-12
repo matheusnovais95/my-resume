@@ -36,8 +36,8 @@ export const Resume = ({ texts }) => {
                 textDecoration: "underline",
                 textUnderlineOffset: "0.2em",
               }}
-              href="/assets/Matheus_Campos_R2_pt.pdf"
-              download="Matheus-Novais-Campos-pt.pdf"
+              href="/assets/Matheus-Novais-CV-pt.pdf"
+              download="Matheus-Novais-Campos-CV-pt.pdf"
             >
               Pt
             </a>
@@ -47,8 +47,8 @@ export const Resume = ({ texts }) => {
                 textDecoration: "underline",
                 textUnderlineOffset: "0.2em",
               }}
-              href="/assets/Matheus_Campos_Resume_en.pdf"
-              download="Matheus-Novais-Campos-en.pdf"
+              href="/assets/Matheus-Novais-CV-en.pdf"
+              download="Matheus-Novais-Campos-CV-en.pdf"
             >
               En
             </a>

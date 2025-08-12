@@ -6,7 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export const Sobre = ({ texts }) => {
   const { language } = useLanguage();
-  const { title, description: about, name, age, location: local } = texts.about;
+  const { title, description: about, highlight, name, age, location: local } = texts.about;
   const { email, cel: phone } = texts.contact;
   return (
     <div className={styles.containerSobre} id="sobre">
@@ -14,6 +14,9 @@ export const Sobre = ({ texts }) => {
         <Title text={title} />
         <div className={styles.infosSobre}>
           <p className={styles.infosSobreText}>{about}</p>
+          <p className={styles.infosSobreText}>{highlight}</p>
+
+          
           <div className={styles.infosSobreContainer}>
             <div className={styles.infosSobreImage}>
               <Image
